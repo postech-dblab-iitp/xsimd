@@ -197,7 +197,7 @@ namespace xsimd
 #ifdef XSIMD_DEFAULT_ARCH
     using default_arch = XSIMD_DEFAULT_ARCH;
 #else
-    using default_arch = best_arch;
+    using default_arch = xsimd::avx2;
 #endif
 
     namespace detail

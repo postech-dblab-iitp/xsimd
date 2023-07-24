@@ -192,7 +192,7 @@ namespace xsimd
 
     using x86_arch = typename detail::best<typename detail::supported<all_x86_architectures>::type>::type;
     using arm_arch = typename detail::best<typename detail::supported<all_arm_architectures>::type>::type;
-    using best_arch = typename supported_architectures::best;
+    using best_arch = typename detail::best<supported_architectures>::type;
 
 #ifdef XSIMD_DEFAULT_ARCH
     using default_arch = XSIMD_DEFAULT_ARCH;
